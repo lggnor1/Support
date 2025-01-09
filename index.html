@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후원</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .account {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0074E4;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #0074E4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>후원하기</h1>
+        <p>안녕하세요, xene입니다.<br>
+        후원을 통해 응원해 주시면 큰 힘이 됩니다.<br>
+        아래 계좌로 후원하실 수 있습니다.</p>
+        
+        <p class="account">토스뱅크 1000-1234-5678</p>
+        <p>계좌번호를 복사해서 송금해 주세요.</p>
+        
+        <a class="btn" href="javascript:void(0)" onclick="copyToClipboard()">후원하기</a>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const text = "1000-1234-5678";  // 여기에 본인의 토스 계좌번호를 입력하세요.
+            navigator.clipboard.writeText(text).then(function() {
+                alert("계좌번호가 복사되었습니다.");
+            }, function(err) {
+                alert("복사에 실패했습니다.");
+            });
+            window.location.href = 'thanks.html';
+        }
+    </script>
+</body>
+</html>
